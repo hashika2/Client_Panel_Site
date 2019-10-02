@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { environment } from '../environments/environment';
+//import { AppComponent } from './app.component';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -12,6 +14,7 @@ import { ClientDetailsComponent } from './components/client-details/client-detai
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SettingsComponent } from './components/settings/settings.component';
+//import { AppRoutingModule } from './/app-routing.module';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
@@ -30,7 +33,11 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     NotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    //AppRoutingModule
+    // AngularFireModule.initializeApp(environment.firebase, 'clientpanel'),
+    // AngularFirestoreModule,
+    // AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
